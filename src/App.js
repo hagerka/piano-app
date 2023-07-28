@@ -15,6 +15,8 @@ const gRightShoulder = 7;
 const aLeftShoulder = 8;
 const aRightShoulder = 7;
 const bLeftShoulder = 8;
+const translationX = "translate(" + 7 * whiteWidth + ", 0)";
+const translation2X = "translate(" + 14 * whiteWidth + ", 0)";
 const smallWhiteWidth = whiteWidth - cRightShoulder;
 
 function evalMath(num1, opp, num2) {
@@ -363,28 +365,294 @@ const keyPath12 = "M".concat(
   " ",
   startingCY
 );
+const keyPath13 = "M".concat(
+  evalMath(evalMath(whiteWidth, "*", 7), "+", startingCX),
+  " ",
+  startingCY,
+  " V ",
+  whiteHeight,
+  " H ",
+  evalMath(evalMath(whiteWidth, "*", 8), "+", startingCX),
+  " V ",
+  startingCY,
+  " L ",
+  evalMath(evalMath(whiteWidth, "*", 7), "+", startingCX),
+  " ",
+  startingCY
+);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <main className="main">
         <svg>
           <g>
-            <path id="c" d={keyPath1} fill="white" stroke="black" />
-            <path id="cs" d={keyPath2} fill="black" stroke="black" />
-            <path id="d" d={keyPath3} fill="white" stroke="black" />
-            <path id="ds" d={keyPath4} fill="black" stroke="black" />
-            <path id="e" d={keyPath5} fill="white" stroke="black" />
-            <path id="f" d={keyPath6} fill="white" stroke="black" />
-            <path id="fs" d={keyPath7} fill="black" stroke="black" />
-            <path id="g" d={keyPath8} fill="white" stroke="black" />
-            <path id="gs" d={keyPath9} fill="black" stroke="black" />
-            <path id="a" d={keyPath10} fill="white" stroke="black" />
-            <path id="as" d={keyPath11} fill="black" stroke="black" />
-            <path id="b" d={keyPath12} fill="white" stroke="black" />
+            <path
+              className="key"
+              id="c"
+              d={keyPath1}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="cs"
+              d={keyPath2}
+              fill="black"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="d"
+              d={keyPath3}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="ds"
+              d={keyPath4}
+              fill="black"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="e"
+              d={keyPath5}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="f"
+              d={keyPath6}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="fs"
+              d={keyPath7}
+              fill="black"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="g"
+              d={keyPath8}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="gs"
+              d={keyPath9}
+              fill="black"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="a"
+              d={keyPath10}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="as"
+              d={keyPath11}
+              fill="black"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="b"
+              d={keyPath12}
+              fill="white"
+              stroke="black"
+            />
+          </g>
+          <g id="2nd-octave" transform={translationX}>
+            <path
+              className="key"
+              id="c2"
+              d={keyPath1}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="cs2"
+              d={keyPath2}
+              fill="black"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="d2"
+              d={keyPath3}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="ds2"
+              d={keyPath4}
+              fill="black"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="e2"
+              d={keyPath5}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="f2"
+              d={keyPath6}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="fs2"
+              d={keyPath7}
+              fill="black"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="g2"
+              d={keyPath8}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="gs2"
+              d={keyPath9}
+              fill="black"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="a2"
+              d={keyPath10}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="as2"
+              d={keyPath11}
+              fill="black"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="b2"
+              d={keyPath12}
+              fill="white"
+              stroke="black"
+            />
+          </g>
+          <g id="3rd-octave" transform={translation2X}>
+            <path
+              className="key"
+              id="c3"
+              d={keyPath1}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="cs3"
+              d={keyPath2}
+              fill="black"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="d3"
+              d={keyPath3}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="ds3"
+              d={keyPath4}
+              fill="black"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="e3"
+              d={keyPath5}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="f3"
+              d={keyPath6}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="fs3"
+              d={keyPath7}
+              fill="black"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="g3"
+              d={keyPath8}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="gs3"
+              d={keyPath9}
+              fill="black"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="a3"
+              d={keyPath10}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="as3"
+              d={keyPath11}
+              fill="black"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="b3"
+              d={keyPath12}
+              fill="white"
+              stroke="black"
+            />
+            <path
+              className="key"
+              id="c4"
+              d={keyPath13}
+              fill="white"
+              stroke="black"
+            />
           </g>
         </svg>
-      </header>
+      </main>
     </div>
   );
 }
